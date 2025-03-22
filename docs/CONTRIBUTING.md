@@ -182,3 +182,39 @@ We recognize all types of contributions:
 ## Code of Conduct
 
 All contributors must follow our [Code of Conduct](CODE_OF_CONDUCT.md).
+
+## Commit Message Format
+
+We follow the [Conventional Commits](https://www.conventionalcommits.org/) specification for our commit messages. The format is as follows:
+
+```
+<type>[optional scope]: <description>
+
+[optional body]
+
+[optional footer(s)]
+```
+
+The `<type>` can be one of the following:
+- `feat`: A new feature
+- `fix`: A bug fix
+- `docs`: Documentation only changes
+- `style`: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
+- `refactor`: A code change that neither fixes a bug nor adds a feature
+- `perf`: A code change that improves performance
+- `test`: Adding missing tests or correcting existing tests
+- `build`: Changes that affect the build system or external dependencies
+- `ci`: Changes to our CI configuration files and scripts
+- `chore`: Other changes that don't modify src or test files
+- `revert`: Reverts a previous commit
+
+The `<description>` should be a short, imperative tense description of the change.
+
+For example:
+```
+feat: Add data validation for MMIP case fields
+docs: Update README with new project board link
+fix: Correct off-by-one error in search results paging
+```
+
+Please ensure your commits follow this format before pushing. We will set up automated checks to enforce this soon.
