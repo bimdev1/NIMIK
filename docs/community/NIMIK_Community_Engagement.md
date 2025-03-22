@@ -1,13 +1,13 @@
 # NIMIK Community Engagement
 
 - How will we build trust and partnerships with MMIWG2S communities and organizations?
-- What governance structures will ensure MMIWG2S leadership and oversight? 
+- What governance structures will ensure MMIWG2S leadership and oversight?
 - How will we handle MMIWG2S data access and usage requests from external parties?
 - What processes will we put in place to respond to MMIWG2S community concerns or incidents?
 - How will we share decision-making and resource allocation with MMIWG2S community partners?
 
 ## Additional Considerations
-- Identifying and prioritizing MMIWG2S community stakeholders, including families, tribal leaders, community advocates, and service providers 
+- Identifying and prioritizing MMIWG2S community stakeholders, including families, tribal leaders, community advocates, and service providers
 - Developing a community engagement plan to build trust and partnerships with MMIWG2S communities throughout the project lifecycle
 - Establishing a community advisory board or steering committee to guide NIMIK's development and ensure alignment with MMIWG2S community needs
 - Creating data governance policies and procedures in collaboration with MMIWG2S community representatives to ensure ethical and responsible data practices
@@ -19,11 +19,11 @@
 ## Potential Sources and Research Material
 - MMIWG2S community engagement frameworks and best practices developed by Indigenous organizations and advocates
 - Stakeholder mapping and analysis techniques tailored to the unique relationships and dynamics within MMIWG2S communities
-- Participatory governance models and case studies from Indigenous-led data stewardship and research initiatives 
+- Participatory governance models and case studies from Indigenous-led data stewardship and research initiatives
 - Data governance frameworks and policies designed for Indigenous data sovereignty and community-owned information
 - Data sharing agreement templates and examples specific to MMIWG2S data exchange with external parties
 - Crisis communication and incident response planning guides relevant to MMIWG2S data management and community interactions
-- Capacity building and training curricula on tribal data governance, community-based research, and MMIWG2S advocacy 
+- Capacity building and training curricula on tribal data governance, community-based research, and MMIWG2S advocacy
 
 ## Governance Structure and Protocols
 
@@ -97,4 +97,4 @@ The Community Advisory Board (CAB) serves as NIMIK's primary governance body, en
 - [ ] Open feedback channels
 - [ ] Accessible documentation
 
-> **Note**: All governance structures and protocols are living documents, subject to regular review and modification based on community feedback and changing needs. 
+> **Note**: All governance structures and protocols are living documents, subject to regular review and modification based on community feedback and changing needs.

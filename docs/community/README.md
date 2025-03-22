@@ -71,4 +71,4 @@ This documentation is under active development as part of our groundwork phase. 
 - Establishing community governance structures
 - Developing cultural safety guidelines
 - Creating engagement protocols
-- Building support networks 
+- Building support networks

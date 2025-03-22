@@ -81,4 +81,4 @@ src/nimik/
 
 ## Status
 
-This documentation is under active development as part of our groundwork phase. Each section will be expanded with detailed documentation as components are implemented. 
+This documentation is under active development as part of our groundwork phase. Each section will be expanded with detailed documentation as components are implemented.

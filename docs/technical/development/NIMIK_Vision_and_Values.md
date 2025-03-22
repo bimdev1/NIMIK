@@ -14,7 +14,7 @@
 - Implementing mechanisms for transparency, feedback, and course correction
 
 ## Potential Sources and Research Material
-- Existing MMIWG2S databases, reports, and initiatives 
+- Existing MMIWG2S databases, reports, and initiatives
 - Best practices from similar community-driven data projects
 - Ethical frameworks for Indigenous data sovereignty and governance
 - Stakeholder analysis and user research methods

@@ -21,4 +21,4 @@
 - Data anonymization and de-identification techniques appropriate for MMIWG2S case details and PII
 - Access control models and best practices for protecting sensitive, community-owned data in centralized databases
 - Data retention and deletion workflows and requirements for missing persons records
-- Privacy impact assessment templates and guidelines for databases containing sensitive personal information 
+- Privacy impact assessment templates and guidelines for databases containing sensitive personal information

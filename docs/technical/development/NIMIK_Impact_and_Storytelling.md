@@ -7,11 +7,11 @@
 - What partnerships could amplify the impact and reach of the platform for MMIWG2S?
 
 ## Additional Considerations
-- Defining key performance indicators (KPIs) and success metrics 
-- Implementing data analytics and reporting capabilities 
+- Defining key performance indicators (KPIs) and success metrics
+- Implementing data analytics and reporting capabilities
 - Developing data visualization and storytelling templates
 - Establishing regular community reporting and feedback loops
-- Identifying impactful advocacy and awareness campaign opportunities  
+- Identifying impactful advocacy and awareness campaign opportunities
 - Providing data storytelling training and resources for MMIWG2S families
 - Partnering with media, advocacy, and research organizations to amplify impact
 - Conducting impact evaluation and assessment studies
@@ -24,7 +24,7 @@
 - Advocacy and awareness campaign strategies and case studies
 - Data storytelling training materials and curricula
 - Impact evaluation methods and approaches for data platforms
-- Potential partner organizations and collaboration models 
+- Potential partner organizations and collaboration models
 
 ## Sustainability and Capacity Building
 
@@ -36,11 +36,11 @@ graph TD
     A[Core Funding] --> B[Operations]
     A --> C[Development]
     A --> D[Community Programs]
-    
+
     E[Diversified Revenue] --> F[Grants]
     E --> G[Partnerships]
     E --> H[Services]
-    
+
     I[Resource Allocation] --> J[70% Programs]
     I --> K[20% Operations]
     I --> L[10% Reserve]
@@ -209,4 +209,4 @@ graph TD
    - Impact assessment
    - Course correction
 
-> **Note**: All strategies should be regularly reviewed and adjusted based on community feedback and changing needs. 
+> **Note**: All strategies should be regularly reviewed and adjusted based on community feedback and changing needs.

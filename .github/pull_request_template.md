@@ -38,4 +38,4 @@ Please delete options that are not relevant.
 If applicable, add screenshots to help explain your changes.
 
 ## Additional Notes
-Add any other context about the pull request here. 
+Add any other context about the pull request here.

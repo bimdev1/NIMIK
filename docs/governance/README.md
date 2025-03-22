@@ -82,4 +82,4 @@ This documentation is under active development as part of our groundwork phase. 
 - Formalizing governance structures
 - Developing detailed policies
 - Creating implementation guides
-- Building assessment frameworks 
+- Building assessment frameworks

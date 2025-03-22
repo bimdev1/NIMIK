@@ -36,4 +36,4 @@ If applicable, add screenshots to help explain your problem.
 - [ ] Language used is trauma-informed and culturally appropriate
 
 **Additional Context**
-Add any other context about the problem here. 
+Add any other context about the problem here.

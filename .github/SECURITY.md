@@ -157,4 +157,4 @@ We acknowledge and thank:
 - Security researchers who responsibly disclose
 - Cultural safety advocates
 - Indigenous knowledge keepers
-- Community members who report concerns 
+- Community members who report concerns

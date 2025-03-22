@@ -58,4 +58,4 @@ testpaths = ["tests"]
 select = ["E", "F", "B", "I"]
 ignore = []
 line-length = 88
-target-version = "py39" 
+target-version = "py39"

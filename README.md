@@ -28,25 +28,25 @@ The system includes:
 
 NIMIK serves multiple audiences:
 
-- **Families & Kin** seeking visibility and justice  
-- **Journalists & Researchers** accessing verified public data  
-- **Advocates & Community Organizers** tracking patterns and state neglect  
-- **Developers** supporting trauma-informed, anti-carceral systems  
-- **Educators & Historians** working on MMIP accountability  
+- **Families & Kin** seeking visibility and justice
+- **Journalists & Researchers** accessing verified public data
+- **Advocates & Community Organizers** tracking patterns and state neglect
+- **Developers** supporting trauma-informed, anti-carceral systems
+- **Educators & Historians** working on MMIP accountability
 
 ---
 
 ## Ethics & Philosophy
 
-NIMIK is built on **non-extractive**, **trauma-informed**, and **anti-carceral** principles.  
-We do not "collect" cases—we preserve them.  
+NIMIK is built on **non-extractive**, **trauma-informed**, and **anti-carceral** principles.
+We do not "collect" cases—we preserve them.
 We do not centralize data for control—we build decentralized accountability.
 
 We believe:
 
-- Public data is not neutral  
-- Families deserve agency over their stories  
-- Tools must be built with—not just for—their communities  
+- Public data is not neutral
+- Families deserve agency over their stories
+- Tools must be built with—not just for—their communities
 
 See our [Philosophy](docs/PHILOSOPHY.md) for full values and design ethics.
 
@@ -160,7 +160,7 @@ See our [Project Board](https://github.com/bimdev1/NIMIK/projects/1) for detaile
 
 ## License
 
-This project is released under the [MIT License](LICENSE).  
+This project is released under the [MIT License](LICENSE).
 We ask that all users and contributors respect the ethics outlined in our philosophy and code of conduct.
 
 ---
