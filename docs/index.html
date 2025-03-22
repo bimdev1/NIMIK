@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIMIK Data Sources</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto px-4 py-8">
+        <header class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-gray-900 mb-4">NIMIK Data Sources</h1>
+            <p class="text-xl text-gray-600">National Index of Missing Indigenous Kin</p>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <!-- Submit New Source -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h2 class="text-2xl font-semibold mb-4">Submit New Source</h2>
+                <p class="mb-4">Help us expand our database by submitting new data sources.</p>
+                <a href="https://github.com/bimdev1/NIMIK/issues/new?template=data_source.yml"
+                   class="inline-block bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">
+                    Submit Source
+                </a>
+            </div>
+
+            <!-- View Sources -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h2 class="text-2xl font-semibold mb-4">View Sources</h2>
+                <p class="mb-4">Explore and track data source evaluations.</p>
+                <a href="https://github.com/orgs/bimdev1/projects/2"
+                   class="inline-block bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700">
+                    View Sources
+                </a>
+            </div>
+        </div>
+
+        <!-- Source Status -->
+        <div class="bg-white p-6 rounded-lg shadow-md mb-12">
+            <h2 class="text-2xl font-semibold mb-6">Source Status</h2>
+            <div id="sourceStats" class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <!-- Filled by JavaScript -->
+            </div>
+        </div>
+
+        <!-- Recent Sources -->
+        <div class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-2xl font-semibold mb-6">Recent Sources</h2>
+            <div id="recentSources" class="space-y-4">
+                <!-- Filled by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // GitHub API configuration
+        const owner = 'bimdev1';
+        const repo = 'NIMIK';
+        const apiBase = 'https://api.github.com';
+
+        // Fetch source statistics
+        async function fetchSourceStats() {
+            try {
+                const response = await fetch(`${apiBase}/repos/${owner}/${repo}/issues?labels=data-source&state=all`);
+                const issues = await response.json();
+
+                const stats = {
+                    'Evaluation Queue': issues.filter(i => i.labels.some(l => l.name === 'evaluation-queue')).length,
+                    'In Review': issues.filter(i => i.labels.some(l => l.name === 'initial-review')).length,
+                    'Completed': issues.filter(i => i.labels.some(l => l.name === 'evaluation-complete')).length
+                };
+
+                const statsDiv = document.getElementById('sourceStats');
+                statsDiv.innerHTML = Object.entries(stats)
+                    .map(([status, count]) => `
+                        <div class="bg-gray-50 p-4 rounded">
+                            <h3 class="font-semibold text-lg">${status}</h3>
+                            <p class="text-3xl font-bold text-blue-600">${count}</p>
+                        </div>
+                    `).join('');
+            } catch (error) {
+                console.error('Error fetching stats:', error);
+            }
+        }
+
+        // Fetch recent sources
+        async function fetchRecentSources() {
+            try {
+                const response = await fetch(`${apiBase}/repos/${owner}/${repo}/issues?labels=data-source&state=all&per_page=5`);
+                const issues = await response.json();
+
+                const sourcesDiv = document.getElementById('recentSources');
+                sourcesDiv.innerHTML = issues.map(issue => `
+                    <div class="border-l-4 border-blue-600 pl-4">
+                        <h3 class="font-semibold">
+                            <a href="${issue.html_url}" class="text-blue-600 hover:underline">
+                                ${issue.title}
+                            </a>
+                        </h3>
+                        <div class="text-sm text-gray-600 mt-1">
+                            Submitted ${new Date(issue.created_at).toLocaleDateString()}
+                        </div>
+                        <div class="flex flex-wrap gap-2 mt-2">
+                            ${issue.labels.map(label =>
+                                `<span class="px-2 py-1 text-xs rounded bg-gray-100">
+                                    ${label.name}
+                                </span>`
+                            ).join('')}
+                        </div>
+                    </div>
+                `).join('');
+            } catch (error) {
+                console.error('Error fetching sources:', error);
+            }
+        }
+
+        // Initialize
+        fetchSourceStats();
+        fetchRecentSources();
+
+        // Refresh data every 5 minutes
+        setInterval(() => {
+            fetchSourceStats();
+            fetchRecentSources();
+        }, 300000);
+    </script>
+</body>
+</html>
