@@ -1,0 +1,99 @@
+name: Data Source Submission
+description: Submit a potential data source for NIMIK
+title: "[SOURCE] "
+labels: ["data-source"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for suggesting a data source for NIMIK. Please provide as much information as possible to help us evaluate it.
+
+  - type: dropdown
+    id: source_category
+    attributes:
+      label: Source Category
+      description: What type of organization is this source from?
+      options:
+        - Tribal Task Force/Initiative
+        - Tribal Law Enforcement
+        - Tribal Epidemiology Center
+        - Tribal Advocacy Organization
+        - Tribal College/University
+        - Tribal Governance Body
+        - Federal Agency
+        - State Agency
+        - Local Law Enforcement
+        - Research Organization
+        - Advocacy Group
+        - Media Organization
+        - Cross-Border Organization
+        - International Database
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: source_name
+    attributes:
+      label: Source Name
+      description: Name of the organization or database
+      placeholder: "e.g., Navajo Nation Missing Persons Updates"
+    validations:
+      required: true
+
+  - type: input
+    id: source_url
+    attributes:
+      label: Website/URL
+      description: Link to the organization or data source (if public)
+      placeholder: "https://example.com"
+
+  - type: textarea
+    id: data_description
+    attributes:
+      label: Data Description
+      description: What kind of MMIP data does this source provide?
+      placeholder: "Describe the type of data, format, frequency of updates, etc."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: data_access
+    attributes:
+      label: Data Access Type
+      description: How is the data currently accessible?
+      options:
+        - Publicly Available
+        - Requires Permission
+        - Tribal Access Only
+        - Not Currently Available
+        - Unknown
+    validations:
+      required: true
+
+  - type: textarea
+    id: contact_info
+    attributes:
+      label: Contact Information
+      description: Any public contact information for the source (if available)
+      placeholder: "Public contact information only - do not share private or restricted contact details"
+
+  - type: checkboxes
+    id: cultural_considerations
+    attributes:
+      label: Cultural and Ethical Considerations
+      description: Please confirm the following
+      options:
+        - label: This source respects Indigenous data sovereignty
+          required: true
+        - label: The data is collected ethically and with community consent
+          required: true
+        - label: No sensitive or restricted information is included in this submission
+          required: true
+
+  - type: textarea
+    id: additional_info
+    attributes:
+      label: Additional Information
+      description: Any other relevant details about this data source
+      placeholder: "Include any additional context that would help us evaluate this source"
