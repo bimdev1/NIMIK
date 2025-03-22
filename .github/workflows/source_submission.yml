@@ -1,0 +1,22 @@
+name: Source Submission Processing
+
+on:
+  issues:
+    types: [opened, labeled]
+
+jobs:
+  process-source:
+    runs-on: ubuntu-latest
+    if: contains(github.event.issue.labels.*.name, 'data-source')
+    steps:
+      - name: Add to project
+        uses: actions/add-to-project@v0.5.0
+        with:
+          project-url: https://github.com/orgs/bimdev1/projects/2
+          github-token: ${{ secrets.ADD_TO_PROJECT_PAT }}
+
+      - name: Add triage label
+        uses: andymckay/labeler@master
+        with:
+          add-labels: "needs-evaluation"
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
