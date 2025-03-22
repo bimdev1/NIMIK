@@ -1,5 +1,0 @@
-git status
-git add docs/NIMIK_*.md
-git commit -m "Update NIMIK documentation with refined considerations and research materials for data sourcing, privacy, security, and community engagement"
-git pull origin main --rebase
-git push origin main 

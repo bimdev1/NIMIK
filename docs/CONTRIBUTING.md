@@ -2,6 +2,40 @@
 
 Thank you for your interest in contributing to NIMIK. This document provides guidelines and instructions for contributing.
 
+## Development Setup
+
+### Prerequisites
+
+- Python 3.9 or higher
+- Poetry for dependency management
+- Git
+- Pre-commit hooks
+
+### Initial Setup
+
+1. Fork and clone the repository:
+   ```bash
+   git clone https://github.com/YOUR_USERNAME/NIMIK.git
+   cd NIMIK
+   ```
+
+2. Set up your development environment:
+   ```bash
+   # Install Poetry if you haven't already
+   curl -sSL https://install.python-poetry.org | python3 -
+
+   # Install dependencies
+   poetry install
+
+   # Install pre-commit hooks
+   poetry run pre-commit install
+   ```
+
+3. Create a new branch:
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
+
 ## Project Structure
 
 ```
@@ -52,20 +86,56 @@ nimik/
 
 ## Technical Guidelines
 
-1. **Code Style**
-   - Follow PEP 8 for Python code
-   - Use Black for code formatting
-   - Run linters before submitting
+1. **Code Style and Quality**
+   - Code is automatically formatted with Black
+   - Imports are sorted with isort
+   - Type checking with mypy
+   - Linting with ruff
+   - Pre-commit hooks enforce these standards
 
 2. **Testing**
    - Write unit tests for new features
    - Include integration tests
    - Add cultural safety tests
+   - Run tests with pytest:
+     ```bash
+     poetry run pytest
+     ```
 
 3. **Documentation**
    - Update relevant documentation
    - Follow documentation style guide
    - Include context and rationale
+   - Document any new dependencies
+
+## Quality Checks
+
+Our pre-commit hooks enforce several checks:
+
+1. **Code Quality**
+   - Trailing whitespace removal
+   - End-of-file fixes
+   - YAML validation
+   - Black formatting
+   - isort import sorting
+   - Ruff linting
+   - mypy type checking
+
+2. **Cultural Safety**
+   - Language sensitivity
+   - Cultural appropriateness
+   - Trauma-informed content
+   - Accessibility standards
+
+3. **Security**
+   - Secret detection
+   - Dependency scanning
+   - Basic security checks
+
+To run checks manually:
+```bash
+poetry run pre-commit run --all-files
+```
 
 ## Contribution Process
 
@@ -75,15 +145,15 @@ nimik/
    - Consult community guidelines
 
 2. **Making Changes**
-   - Fork the repository
    - Create a feature branch
    - Make focused commits
    - Follow coding standards
+   - Run quality checks
 
 3. **Submitting Changes**
    - Update documentation
    - Run all tests
-   - Create a pull request
+   - Create a pull request using our template
    - Respond to feedback
 
 4. **Review Process**
@@ -94,10 +164,10 @@ nimik/
 
 ## Getting Help
 
-- Join our community channels
-- Read our documentation
-- Contact maintainers
-- Attend community calls
+- Open a [Discussion](https://github.com/bimdev1/NIMIK/discussions) for questions
+- Check our [Documentation](./docs/)
+- Review [Security Policy](/.github/SECURITY.md)
+- Join community calls (schedule in docs)
 
 ## Recognition
 
