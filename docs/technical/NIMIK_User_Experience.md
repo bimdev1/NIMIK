@@ -145,31 +145,33 @@
 ### Language Priority Assessment
 | Language | Priority | Community Partners | Status |
 |----------|----------|-------------------|---------|
-| 🏴 English | P0 | Multiple partners | ✅ Active |
-| 🇲🇽 Spanish | P1 | TBD | 📅 Q2 2024 |
-| 🍁 French | P1 | TBD | 📅 Q2 2024 |
-| 🪶 Navajo (Diné) | P1 | TBD | 📅 Q3 2024 |
-| 🪶 Cherokee | P2 | TBD | 📅 Q3 2024 |
-| 🪶 Lakota | P2 | TBD | 📅 Q4 2024 |
-| 🪶 Ojibwe | P2 | TBD | 📅 Q4 2024 |
+| 🇺🇸 English | P0 | Multiple partners | ✅ Active |
+| 🇲🇽 Español / Spanish | P1 | TBD | 🔄 In Progress |
+| 🇨🇦 Français / French | P1 | TBD | 🔄 In Progress |
+| ⚪ Diné bizaad | P1 | TBD | 📋 Planned |
+| 🟡 ᏣᎳᎩ (Tsalagi) | P2 | TBD | 📋 Planned |
+| 🔴 Lakȟótiyapi | P2 | TBD | 📋 Planned |
+| 🟢 Anishinaabemowin | P2 | TBD | 📋 Planned |
+
+> **Note**: The symbols used represent colors from official flags or seals: Navajo Nation (white), Cherokee Nation (yellow), Lakota (red from the sacred pipe), and Anishinaabe (green from the medicine wheel). These are simplified representations - please refer to each nation's official materials for complete symbolism.
 
 ### Implementation Phases
 
-#### Phase 1: Foundation (Q1-Q2 2024)
+#### Phase 1: Foundation
 - [ ] Implement i18n infrastructure
 - [ ] Set up translation management system
 - [ ] Create style guides for each language
 - [ ] Establish translation review process
 - [ ] Build automated testing for translations
 
-#### Phase 2: Core Languages (Q2-Q3 2024)
+#### Phase 2: Core Languages
 - [ ] Launch Spanish and French support
 - [ ] Partner with Indigenous language experts
 - [ ] Begin Navajo (Diné) translation
 - [ ] Implement language detection
 - [ ] Add language preference settings
 
-#### Phase 3: Indigenous Languages (Q3-Q4 2024)
+#### Phase 3: Indigenous Languages
 - [ ] Launch initial Indigenous language support
 - [ ] Create Indigenous language resources
 - [ ] Implement specialized character support

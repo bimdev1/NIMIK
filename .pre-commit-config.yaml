@@ -1,0 +1,63 @@
+repos:
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v4.4.0
+  hooks:
+    - id: trailing-whitespace
+    - id: end-of-file-fixer
+    - id: check-yaml
+    - id: check-added-large-files
+    - id: check-case-conflict
+    - id: check-merge-conflict
+    - id: detect-private-key
+
+- repo: https://github.com/psf/black
+  rev: 23.9.1
+  hooks:
+    - id: black
+
+- repo: https://github.com/pycqa/isort
+  rev: 5.12.0
+  hooks:
+    - id: isort
+
+- repo: https://github.com/charliermarsh/ruff-pre-commit
+  rev: v0.0.291
+  hooks:
+    - id: ruff
+
+- repo: https://github.com/pre-commit/mirrors-mypy
+  rev: v1.5.1
+  hooks:
+    - id: mypy
+      additional_dependencies: [types-all]
+
+# Custom hooks for cultural safety and accessibility
+- repo: local
+  hooks:
+    - id: check-cultural-safety
+      name: Check Cultural Safety
+      entry: python scripts/check_cultural_safety.py
+      language: python
+      types: [text]
+      pass_filenames: true
+      
+    - id: check-accessibility
+      name: Check Accessibility
+      entry: python scripts/check_accessibility.py
+      language: python
+      types: [file]
+      pass_filenames: true
+      
+    - id: check-trauma-informed
+      name: Check Trauma-Informed Language
+      entry: python scripts/check_trauma_informed.py
+      language: python
+      types: [text]
+      pass_filenames: true
+
+    - id: check-data-sovereignty
+      name: Check Data Sovereignty
+      entry: python scripts/check_data_sovereignty.py
+      language: python
+      types: [python]
+      pass_filenames: true 
