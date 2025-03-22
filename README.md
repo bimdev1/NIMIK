@@ -154,7 +154,7 @@ nimik/
 - [ ] Begin core implementation
 - [ ] Set up initial testing
 
-See our [Project Board](https://github.com/orgs/bimdev1/projects/1) for detailed status.
+See our [Project Board](https://github.com/orgs/bimdev1/projects/3) for detailed status.
 
 ---
 
