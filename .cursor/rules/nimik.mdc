@@ -1,0 +1,19 @@
+---
+description: Code behavior rules for the NIMIK repo. Guides AI toward modular, ethical, and context-aware completions.
+globs: **/*.{py,ts,tsx,js,json,md}
+---
+
+# Your rule content
+
+- You can @ files here
+- You can use markdown but dont have to
+# NIMIK – Code Behavior Rules for Cursor
+
+- Always prioritize **traceability**: every data field or transformation must have a clear source or comment.
+- Scraper modules should be **modular, source-specific**, and normalize output to a shared schema.
+- Backend APIs should be **stateless**, using FastAPI where applicable. No auth assumptions unless explicitly scoped.
+- Frontend components must be **keyboard-accessible**, identity-neutral, and trauma-informed.
+- Flag logic that touches on **deletion, auto-filtering, or irreversible actions** with comments or warnings.
+- Naming: use `snake_case` for Python, `camelCase` for JS/TS, `PascalCase` for UI components, and `kebab-case` for files.
+- Avoid static ethical guardrails — instead, raise **moral questions in comments** where ambiguity exists (e.g. scraping sensitive data).
+- Don't default to best practices — default to **context-aware decisions** that prioritize dignity and long-term stability.
