@@ -218,3 +218,5 @@ fix: Correct off-by-one error in search results paging
 ```
 
 Please ensure your commits follow this format before pushing. We will set up automated checks to enforce this soon.
+
+Note: While it's important to follow this format consistently, we generally advise against rewriting commit history solely to change past commit messages to this format. Rewriting public history can cause problems for other contributors. However, if you are the sole contributor to the repository, the risk is lower and it may be beneficial to have a consistent history from the start. If you do choose to rewrite history, do so with caution and make sure to force push (`git push --force`) after rewriting. If inconsistent messages become a problem in the future for a multi-contributor repository, we may consider a one-time history rewrite. Any such action will be thoroughly communicated to all contributors.
