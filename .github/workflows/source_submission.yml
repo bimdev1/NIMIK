@@ -15,8 +15,74 @@ jobs:
           project-url: https://github.com/orgs/bimdev1/projects/2
           github-token: ${{ secrets.ADD_TO_PROJECT_PAT }}
 
-      - name: Add triage label
+      - name: Add initial labels
         uses: andymckay/labeler@master
         with:
-          add-labels: "needs-evaluation"
+          add-labels: "evaluation-queue,needs-evaluation"
           repo-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Add source type label
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const issue = context.payload.issue;
+            const body = issue.body;
+
+            // Extract source category from the issue body
+            const categoryMatch = body.match(/### Source Category\s+(.+?)(?=\n|$)/);
+            if (categoryMatch) {
+              const category = categoryMatch[1].trim().toLowerCase();
+              let label = '';
+
+              if (category.includes('tribal')) {
+                label = 'source-tribal';
+              } else if (category.includes('federal')) {
+                label = 'source-federal';
+              } else if (category.includes('state')) {
+                label = 'source-state';
+              } else if (category.includes('research') || category.includes('advocacy')) {
+                label = 'source-ngo';
+              } else if (category.includes('international') || category.includes('cross-border')) {
+                label = 'source-international';
+              }
+
+              if (label) {
+                await github.rest.issues.addLabels({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: issue.number,
+                  labels: [label]
+                });
+              }
+            }
+
+      - name: Add access type label
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const issue = context.payload.issue;
+            const body = issue.body;
+
+            // Extract access type from the issue body
+            const accessMatch = body.match(/### Data Access Type\s+(.+?)(?=\n|$)/);
+            if (accessMatch) {
+              const access = accessMatch[1].trim().toLowerCase();
+              let label = '';
+
+              if (access.includes('public')) {
+                label = 'access-public';
+              } else if (access.includes('permission')) {
+                label = 'access-permission';
+              } else if (access.includes('tribal')) {
+                label = 'access-tribal';
+              }
+
+              if (label) {
+                await github.rest.issues.addLabels({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: issue.number,
+                  labels: [label]
+                });
+              }
+            }
