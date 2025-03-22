@@ -17,9 +17,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
+      - name: Copy index.html to root
+        run: |
+          mkdir -p dist
+          cp docs/index.html dist/
+          touch dist/.nojekyll
+
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./docs
+          publish_dir: ./dist
           force_orphan: true
